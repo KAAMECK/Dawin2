@@ -115,7 +115,8 @@
     <h2 id="rsvp-title">Votre présence est essentielle</h2>
     <p class="deadline">Réponse souhaitée avant le <strong>30 Novembre 2025</strong></p>
 
-    <form id="rsvpForm" novalidate>
+    <!-- Formulaire unique -->
+    <form id="rsvpForm" action="rsvp.php" method="POST" novalidate>
       <div class="field">
         <label for="nom">Votre nom & prénom</label>
         <input id="nom" name="nom" type="text" placeholder="Ex. Néhémie KUMA" autocomplete="name" required />
@@ -153,6 +154,7 @@
         En validant, vos informations restent confidentielles. Vous pouvez modifier votre réponse à tout moment.
       </p>
     </form>
+    <div id="notif" class="notif" aria-live="polite"></div>
   </div>
 </section>
 </main>

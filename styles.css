@@ -286,6 +286,28 @@ input:focus {
   .options { gap: 24px; } /* réduit l’espace entre Présent/Absent sur mobile compact */
 }
 
+.notif {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px); /* décalée vers le bas au repos */
+  background: var(--success);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1000;
+}
+
+.notif.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* remonte en place */
+}
+
 /* ---------- Encadrement pano di pinti (desktop uniquement) ---------- */
 body::before, body::after {
   content: "";
