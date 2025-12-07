@@ -39,13 +39,14 @@ body {
 
 /* Topbar */
 .topbar {
-  display: grid; grid-template-columns: 1fr auto;
-  align-items: center; gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
   padding: 18px 24px;
   border-bottom: 1px solid var(--border);
   background: #fff;
-  position: sticky; top: 0; z-index: 50;
-  backdrop-filter: saturate(1.1) blur(4px);
+  position: relative; /* ✅ ajoute ceci pour neutraliser */
 }
 .meta {
   color: var(--muted);
@@ -326,4 +327,28 @@ body::after { right: 0; }
 
 @media (min-width: 1025px) {
   body { padding-left: 60px; padding-right: 60px; }
+}
+
+
+
+
+
+body {
+  font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+.title, h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.subtitle, .lead, .pill, .text {
+  font-style: italic; /* sous-titres en italique */
+}
+
+.topbar {
+  position: relative !important;
+  z-index: auto !important;
+}
+.logo-wrapper {
+  position: relative !important;
 }
