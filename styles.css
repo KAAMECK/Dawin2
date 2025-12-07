@@ -1,0 +1,280 @@
+/* Variables */
+:root {
+  --ink: #1c1730;
+  --ink-soft: #2b2141;
+  --bg: #ffffff;
+  --muted: #6b607f;
+  --accent: #7c5cff;       /* violet élégant */
+  --accent-2: #e2d9ff;     /* lavande léger */
+  --border: #e9e6f5;
+  --success: #0d9d63;
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 10px 30px rgba(34, 25, 63, 0.12);
+}
+
+/* Reset élégant */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* Accessibilité */
+.skip-link {
+  position: absolute; left: -9999px; top: -9999px;
+}
+.skip-link:focus {
+  left: 12px; top: 12px; z-index: 9999;
+  background: var(--accent); color: #fff; padding: 8px 12px; border-radius: 8px;
+}
+
+/* Topbar */
+.topbar {
+  display: grid; grid-template-columns: 1fr auto;
+  align-items: center; gap: 16px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(1.1) blur(4px);
+}
+.brand {
+  font-weight: 700; letter-spacing: 0.6px;
+  text-transform: capitalize;
+}
+.meta {
+  color: var(--muted);
+  display: inline-flex; gap: 8px;
+}
+
+/* Sections générales */
+main { padding: 24px; }
+section { margin: 36px auto; max-width: 1100px; }
+
+/* HERO */
+.hero {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px;
+  align-items: end;
+}
+.title {
+  font-size: clamp(28px, 4.6vw, 52px);
+  line-height: 1.15; margin: 0 0 8px;
+}
+.subtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--muted);
+  margin: 0;
+}
+.hero__image {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #f7f6fb;
+}
+.tag {
+  position: absolute; bottom: 10px; left: 10px;
+  background: #fff; color: var(--ink-soft);
+  font-size: 12px; padding: 5px 8px; border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+}
+.lead {
+  font-size: clamp(18px, 2.3vw, 22px);
+}
+.pill {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  background: var(--accent-2);
+  color: var(--ink-soft);
+  border-radius: 999px;
+}
+
+/* DÉTAILS */
+.details h2 { margin: 0 0 12px; }
+.info-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin: 16px 0 18px;
+}
+.info {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  background: #fff;
+}
+.label {
+  display: block; color: var(--muted); font-size: 12px; margin-bottom: 4px;
+}
+.value {
+  font-weight: 600;
+}
+.text { color: var(--ink-soft); }
+
+/* VISION */
+.vision {
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px;
+  align-items: center;
+}
+.vision__media figure {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* RSVP */
+.rsvp {
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px;
+  align-items: start;
+}
+.rsvp__card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.deadline { color: var(--muted); margin-top: -6px; }
+
+.field { margin: 12px 0; }
+label { font-weight: 600; display: block; margin-bottom: 6px; }
+input, textarea {
+  width: 100%; padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px; outline: none;
+  font: inherit; color: var(--ink);
+  background: #fcfbff;
+}
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.18);
+}
+.error {
+  display: block;
+  color: #b00020;
+  min-height: 18px;
+  margin-top: 6px;
+}
+
+.actions {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  margin-top: 10px;
+}
+.btn {
+  padding: 10px 16px; border-radius: 10px;
+  border: 1px solid var(--border); cursor: pointer;
+  background: #fff; color: var(--ink);
+}
+.btn.primary {
+  background: var(--ink-soft); color: #fff; border-color: var(--ink-soft);
+}
+.btn.primary:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn.ghost {
+  background: transparent;
+}
+
+/* Footer */
+.footer {
+  margin: 48px auto 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(12px); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); transition: opacity 600ms ease, transform 600ms ease; }
+
+/* Réduction d’animation si nécessaire */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .hero, .vision, .rsvp {
+    grid-template-columns: 1fr;
+  }
+  .hero__text { order: 2; }
+  .hero__image { order: 1; }
+  .info-grid { grid-template-columns: 1fr; }
+  main { padding: 16px; }
+}
+.logo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: var(--accent-2);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  z-index: 2;
+}
+
+.motif-pano {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/pano-di-pinti.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 1;
+  pointer-events: none;
+}
+.logo-wrapper {
+  padding: 12px;
+}
+.logo {
+  width: 64px;
+}
+
+body::before, body::after {
+  content: "";
+  position: fixed;
+  top: 0; bottom: 0;
+  width: 60px;
+  background-image: url('assets/pano-di-pinti.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+body::before { left: 0; }
+body::after { right: 0; }
+
+body {
+  position: relative;
+  z-index: 1;
+  background: var(--bg);
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  body::before, body::after {
+    display: none;
+  }
+}

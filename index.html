@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BENVINDU NA GUINÉ-BISSAU — Soirée culturelle</title>
+
+  <!-- Couleurs & aperçus -->
+  <meta name="theme-color" content="#2b2141" />
+  <meta name="description" content="Une soirée d'exception pour découvrir, célébrer et investir dans l'avenir de la Guinée-Bissau." />
+
+  <!-- Open Graph (partage) -->
+  <meta property="og:title" content="BENVINDU NA GUINÉ-BISSAU — Soirée culturelle" />
+  <meta property="og:description" content="Musique, danse, gastronomie, talents et opportunités en Guinée-Bissau. Lundi 15 Décembre 2025, 19h30 — Restaurant A, Dakar Almadies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/paysage.jpg" />
+
+  <link rel="preload" href="assets/paysage.jpg" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="topbar" role="banner" aria-label="Barre de titre">
+  <div class="logo-wrapper">
+    <img src="assets/logo.png" alt="Logo de l'agence Dawin" class="logo" />
+    <div class="motif-pano"></div>
+  </div>
+  <div class="meta">
+    <span>15 Décembre 2025</span>
+    <span aria-hidden="true">•</span>
+    <span>19h30</span>
+  </div>
+</header>
+
+  <main id="contenu">
+    <!-- HERO -->
+    <section class="hero reveal" aria-label="Accueil visuel">
+      <div class="hero__text">
+        <h1 class="title">BENVINDU NA GUINÉ-BISSAU</h1>
+        <p class="subtitle">« Une soirée d'exception pour découvrir, célébrer et investir dans l'avenir. »</p>
+      </div>
+      <figure class="hero__image">
+        <img src="assets/paysage.jpg" alt="Paysage côtier de Guinée-Bissau, eau turquoise et végétation" />
+        <figcaption class="tag">PAYSAGE</figcaption>
+      </figure>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro reveal" aria-label="Invitation">
+      <p class="lead">
+        L'agence <strong>DAWIN</strong> vous invite à une <strong>soirée culturelle exceptionnelle</strong>.
+      </p>
+      <div class="pill">DATE — Lundi 15 Décembre</div>
+    </section>
+
+    <!-- DÉTAILS -->
+    <section class="details reveal" aria-label="Détails pratiques">
+      <h2>Soirée culturelle exceptionnelle</h2>
+
+      <div class="info-grid">
+        <div class="info">
+          <span class="label">DATE</span>
+          <span class="value">Lundi 15 Décembre 2025</span>
+        </div>
+        <div class="info">
+          <span class="label">LIEU</span>
+          <span class="value">Restaurant A — Dakar, Almadies</span>
+        </div>
+        <div class="info">
+          <span class="label">HEURE</span>
+          <span class="value">19h30</span>
+        </div>
+      </div>
+
+      <p class="text">
+        Une immersion dans l'âme de la Guinée-Bissau à travers la musique, la danse et la gastronomie.
+        Découvrez les talents locaux et les traditions qui font la richesse de ce pays.
+      </p>
+      <p class="text">
+        Pour partager un moment unique entre artistes, partenaires, investisseurs et amis du projet.
+      </p>
+    </section>
+
+    <!-- CULTURE / VISION -->
+    <section class="vision reveal" aria-label="Culture et vision">
+      <div class="vision__media">
+        <figure>
+          <img src="assets/culture.jpg" alt="Racines d’arbres et mur ancien, symbole de culture vivante" />
+          <figcaption class="tag">CULTURE</figcaption>
+        </figure>
+      </div>
+      <div class="vision__text">
+        <h2>Vision & avenir</h2>
+        <p>
+          Cette soirée met en lumière le potentiel touristique et les opportunités d'investissement en Guinée-Bissau
+          car le pays regorge de trésors naturels et humains qui ne demandent qu'à être valorisés.
+        </p>
+      </div>
+    </section>
+
+    <!-- NATURE + RSVP -->
+    <section class="rsvp reveal" aria-label="Nature et confirmation de présence">
+      <div class="rsvp__media">
+        <figure>
+          <img src="assets/nature.jpg" alt="Pagaie traditionnelle devant l’océan, esprit d’aventure" />
+          <figcaption class="tag">NATURE</figcaption>
+        </figure>
+      </div>
+
+      <div class="rsvp__card" role="form" aria-labelledby="rsvp-title">
+        <h2 id="rsvp-title">Votre présence est essentielle</h2>
+        <p class="deadline">Réponse souhaitée avant le <strong>30 Novembre 2025</strong></p>
+
+        <form id="rsvpForm" novalidate>
+          <div class="field">
+            <label for="nom">Votre nom & prénom</label>
+            <input id="nom" name="nom" type="text" placeholder="Ex. Néhémie KUMA" autocomplete="name" required />
+            <small class="error" id="err-nom" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="message">Message (optionnel)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Un mot pour l’équipe DAWIN…"></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Confirmer ma présence</button>
+            <button type="button" class="btn ghost" id="saveDraft">Enregistrer en brouillon</button>
+          </div>
+
+          <p class="tiny-hint">
+            En validant, vos informations restent confidentielles. Vous pouvez modifier votre réponse à tout moment.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo" aria-label="Pied de page">
+    <p>© 2025 Dawin — BENVINDU NA GUINÉ-BISSAU</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
