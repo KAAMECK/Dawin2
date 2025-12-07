@@ -152,11 +152,15 @@ section { margin: 36px auto; max-width: 1100px; padding: 0 8px; }
 
 /* NATURE */
 .nature { margin-top: 32px; text-align: center; }
+
 /* NATURE plus équilibré */
 .nature__media figure {
   max-width: 600px; /* limite la largeur */
   margin: 0 auto;   /* centre horizontalement */
 }
+
+.nature { margin-bottom: 40px; }
+.rsvp { margin-top: 40px; }
 
 /* RSVP */
 .rsvp {
@@ -176,10 +180,10 @@ section { margin: 36px auto; max-width: 1100px; padding: 0 8px; }
   display: flex;
   justify-content: center; /* centre horizontalement */
 }
-
 .rsvp__card {
-  max-width: 500px; /* largeur raisonnable */
+  max-width: 500px; /* largeur contenue */
   width: 100%;
+  margin: 0 auto;   /* centre sur mobile aussi */
 }
 
 .deadline { color: var(--muted); margin-top: -6px; }
