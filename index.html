@@ -110,34 +110,37 @@
     </section>
 
     <!-- RSVP -->
-    <section class="rsvp reveal" aria-label="Confirmation de présence">
-      <div class="rsvp__card" role="form" aria-labelledby="rsvp-title">
-        <h2 id="rsvp-title">Votre présence est essentielle</h2>
-        <p class="deadline">Réponse souhaitée avant le <strong>30 Novembre 2025</strong></p>
+   <!-- RSVP -->
+<section class="rsvp reveal" aria-label="Confirmation de présence">
+  <div class="rsvp__card" role="form" aria-labelledby="rsvp-title">
+    <h2 id="rsvp-title">Votre présence est essentielle</h2>
+    <p class="deadline">Réponse souhaitée avant le <strong>30 Novembre 2025</strong></p>
 
-        <form id="rsvpForm" novalidate>
-          <div class="field">
-            <label for="nom">Votre nom & prénom</label>
-            <input id="nom" name="nom" type="text" placeholder="Ex. Néhémie KUMA" autocomplete="name" required />
-            <small class="error" id="err-nom" aria-live="polite"></small>
-          </div>
-
-          <div class="field">
-            <label for="message">Message (optionnel)</label>
-            <textarea id="message" name="message" rows="3" placeholder="Un mot pour l’équipe DAWIN…"></textarea>
-          </div>
-
-          <div class="actions">
-            <button type="submit" class="btn primary">Confirmer ma présence</button>
-            <button type="button" class="btn ghost" id="saveDraft">Enregistrer en brouillon</button>
-          </div>
-
-          <p class="tiny-hint">
-            En validant, vos informations restent confidentielles. Vous pouvez modifier votre réponse à tout moment.
-          </p>
-        </form>
+    <form id="rsvpForm" novalidate>
+      <div class="field">
+        <label for="nom">Votre nom & prénom</label>
+        <input id="nom" name="nom" type="text" placeholder="Ex. Néhémie KUMA" autocomplete="name" required />
+        <small class="error" id="err-nom" aria-live="polite"></small>
       </div>
-    </section>
+
+      <div class="field">
+        <label>Confirmation</label>
+        <div class="options">
+          <label><input type="radio" name="presence" value="present" required /> Présent(e)</label>
+          <label><input type="radio" name="presence" value="absent" /> Absent(e)</label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn primary">Confirmer ma présence</button>
+      </div>
+
+      <p class="tiny-hint">
+        En validant, vos informations restent confidentielles. Vous pouvez modifier votre réponse à tout moment.
+      </p>
+    </form>
+  </div>
+</section>
   </main>
 
   <footer class="footer" role="contentinfo" aria-label="Pied de page">
